@@ -19,16 +19,19 @@ const theme = createTheme(themeOptions);
 
 const router = createBrowserRouter([
   {
-    path: '/frosthaven-previouslyon/',
+    path: import.meta.env.VITE_BASEURL,
     element: <App />,
     children: [
       {
-        path: "/scenarios/:scenarioId",
+        path: "scenarios/:scenarioId",
         element: <ScenarioCard />
       }
     ]
   },
 ]);
+
+console.log('process.env.VITE_BASEURL', process.env.VITE_BASEURL);
+console.log('import.meta.env.VITE_BASEURL', import.meta.env.VITE_BASEURL);
 
 const initApp = async() => {
   const container = document.getElementById("root");
