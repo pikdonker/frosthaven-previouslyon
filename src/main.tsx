@@ -19,7 +19,7 @@ const theme = createTheme(themeOptions);
 
 const router = createBrowserRouter([
   {
-    path: process.env.VITE_BASEURL,
+    path: '',
     element: <App />,
     children: [
       {
