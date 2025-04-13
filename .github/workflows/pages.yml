@@ -2,7 +2,7 @@ name: Deploy to Pages
 
 on:
   push:
-    branches: ['main', 'try-to-fix-path']
+    branches: ['main']
   workflow_dispatch:
 
 permissions:
