@@ -19,11 +19,11 @@ export default ( {mode}: ConfigEnv) => {
   }
   else if(isProd) {
     version = `v${Package.version} (${commitHash})`.replace(/(\r\n|\n\r)/gm, "");
-    process.env.VITE_BASEURL = '/frosthaven-previouslyon/';
+    process.env.VITE_BASEURL = '/';
   }
 
   const configOptions: UserConfigExport = {
-    base: isProd ? '/frosthaven-previouslyon/' : '',
+    base: isProd ? '/' : '',
     plugins: [react(), tsConfigPaths()],
     build: {
       minify: isProd? 'esbuild' : false,
