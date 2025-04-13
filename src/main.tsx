@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/scenarios/:scenarioId",
+        path: import.meta.env.VITE_BASEURL + "scenarios/:scenarioId",
         element: <ScenarioCard />
       }
     ]
