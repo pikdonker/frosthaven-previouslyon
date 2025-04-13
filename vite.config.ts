@@ -23,7 +23,7 @@ export default ( {mode}: ConfigEnv) => {
   }
 
   const configOptions: UserConfigExport = {
-    base: isProd ? '/' : '',
+    base: isProd ? '/frosthaven-previouslyon/' : '',
     plugins: [react(), tsConfigPaths()],
     build: {
       minify: isProd? 'esbuild' : false,
