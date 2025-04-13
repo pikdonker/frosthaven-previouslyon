@@ -58,7 +58,7 @@ const ScenarioCard = () => {
 
       </CardContent>
       <CardActions sx={{backgroundColor: '#f3d3a4'}}>
-        <Button sx={{color: theme.palette.text.primary, fontWeight: 'bold' }} size="small" onClick={() => navigate("/")}><KeyboardDoubleArrowLeft /> Go Back</Button>
+        <Button sx={{color: theme.palette.text.primary, fontWeight: 'bold' }} size="small" onClick={() => navigate(import.meta.env.VITE_BASEURL)}><KeyboardDoubleArrowLeft /> Go Back</Button>
       </CardActions>
     </Card>
   );

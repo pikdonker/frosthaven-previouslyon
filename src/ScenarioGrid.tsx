@@ -10,7 +10,7 @@ const ScenarioGrid = () => {
       {
         scenarios.sort((a,b) => a.id < b.id ? -1 : 1).map(s => 
           <Grid key={s.id} item container direction="row" justifyContent="center" alignItems="center" xs={2} sx={{margin: '40px', cursor: 'pointer'}}
-            onClick={() => navigate('/scenarios/' + s.id)}>
+            onClick={() => navigate(import.meta.env.VITE_BASEURL + '/scenarios/' + s.id)}>
             <Box sx={{
               border: '1px solid black',
               borderRadius: '25px',
