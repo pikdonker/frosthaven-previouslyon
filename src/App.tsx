@@ -3,7 +3,7 @@ import { AppBar, Box, Grid, Link, Toolbar, Typography } from "@mui/material";
 import { Outlet, useMatch } from "react-router";
 
 const App = () => {
-  const scenarioId = useMatch('/scenarios/:scenarioId');
+  const scenarioId = useMatch(import.meta.env.VITE_BASEURL + 'scenarios/:scenarioId');
 
   return (
     <>
