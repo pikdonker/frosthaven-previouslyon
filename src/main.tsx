@@ -23,14 +23,13 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "scenarios/:scenarioId",
+        path: "/scenarios/:scenarioId",
         element: <ScenarioCard />
       }
     ]
   },
 ]);
 
-console.log('process.env.VITE_BASEURL', process.env.VITE_BASEURL);
 console.log('import.meta.env.VITE_BASEURL', import.meta.env.VITE_BASEURL);
 
 const initApp = async() => {
