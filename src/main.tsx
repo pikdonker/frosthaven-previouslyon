@@ -1,7 +1,7 @@
 import { StyledEngineProvider, ThemeOptions, ThemeProvider, createTheme } from "@mui/material";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
 import { ScenarioCard } from "./ScenarioCard";
 
 
@@ -17,7 +17,7 @@ const themeOptions: ThemeOptions = {
 
 const theme = createTheme(themeOptions);
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: import.meta.env.VITE_BASEURL,
     element: <App />,

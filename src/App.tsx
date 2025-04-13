@@ -1,9 +1,12 @@
 import { ScenarioGrid } from "./ScenarioGrid";
 import { AppBar, Box, Grid, Link, Toolbar, Typography } from "@mui/material";
-import { Outlet, useMatch } from "react-router";
+import { Outlet, useParams } from "react-router";
 
 const App = () => {
-  const scenarioId = useMatch(import.meta.env.VITE_BASEURL + 'scenarios/:scenarioId');
+  const {scenarioId = null } = useParams();
+
+  console.log('scenarioId',scenarioId);
+  
 
   return (
     <>
